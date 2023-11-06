@@ -13,8 +13,8 @@ https://github.com/hoang23101997/my_social_app
 2. Create and setup the database:
 Run the following commands to create and setup the database: 
 rails db:setup
-rails db:seed
-rails db:migrate
+-> rails db:seed
+-> rails db:migrate
 
 3. Start the Rails server: 
 rails server   
