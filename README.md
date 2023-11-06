@@ -1,24 +1,20 @@
 # README
+My First Social Application 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Prerequisites
+The setups steps expect following tools installed on the system.
+* Ruby version: 3.2.2
+  
+* Rails version: 7.1.1
 
-Things you may want to cover:
+1. Check out the repository
+git clone git@github.com:hoang23101997/my_social_app.git
 
-* Ruby version
+2. Create and setup the database
+Run the following commands to create and setup the database.
+rails db:setup
+rails db:seed
+rails db:migrate
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+3. Start the Rails server
+rails server   
