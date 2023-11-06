@@ -8,7 +8,7 @@ The setups steps expect following tools installed on the system.
 * Rails version: 7.1.1
 
 1. Check out the repository
-git clone git@github.com:hoang23101997/my_social_app.git
+https://github.com/hoang23101997/my_social_app
 
 2. Create and setup the database
 Run the following commands to create and setup the database.
