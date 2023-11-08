@@ -50,7 +50,7 @@ gem 'sass-rails', '>= 5'
 # gem "image_processing", "~> 1.2"
 
 group :production do
-  gem 'fog-aws'
+  gem "aws-sdk-s3", "1.114.0", require: false
 end
 gem "figaro" 
 group :development, :test do
@@ -67,8 +67,6 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-
-  gem 'aws-sdk-s3', '~> 1.136'
 end
 
 group :test do
