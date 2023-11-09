@@ -41,7 +41,7 @@ Rails.application.configure do
     :port           => '587',
     :authentication => :plain,
     :user_name      => 'phanduyhai72199@gmail.com',
-    :password       => '12345AMV@@',
+    :password       => 'wdjs junq wgpx gjpz',
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
