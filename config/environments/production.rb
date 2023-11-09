@@ -33,18 +33,18 @@ Rails.application.configure do
   # config.asset_host = "http://assets.example.com"
 
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :cloudmailin
+  config.action_mailer.delivery_method = :smtp
   host = 'my-social-app-e5c1b66c579c.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
-  ActionMailer::Base.add_delivery_method :cloudmailin, Mail::SMTP, 
-    address: 'smtp.cloudmta.net',
-    port: 587,
-    domain: 'heroku.com',
-    user_name: 'e4231b2f948c506d',
-    password: 'ijk4yafFGtN53BCftESYmP9f',
-    authentication: 'plain',
-    enable_starttls_auto: true
-
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.gmail.com',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['gmail_username'],
+    :password       => ENV['gmail_password'],
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
+  }
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for Apache
