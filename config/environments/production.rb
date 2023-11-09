@@ -36,17 +36,14 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :cloudmailin
   host = 'my-social-app-e5c1b66c579c.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
-  ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.cloudmta.net',
-    :port           => '587',
-    :authentication => :plain,
-    :user_name      => 'e4231b2f948c506d',
-    :password       => 'ijk4yafFGtN53BCftESYmP9f',
-    :domain         => 'heroku.com',
-    :enable_starttls_auto => true
-  }
-
-
+  ActionMailer::Base.add_delivery_method :cloudmailin, Mail::SMTP, 
+    address: 'smtp.cloudmta.net',
+    port: 587,
+    domain: 'heroku.com',
+    user_name: 'e4231b2f948c506d',
+    password: 'ijk4yafFGtN53BCftESYmP9f',
+    authentication: 'plain',
+    enable_starttls_auto: true
 
 
   # Specifies the header that your server uses for sending files.
